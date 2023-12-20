@@ -30,10 +30,10 @@ Route::post('signin', [SigninController::class, 'authenticate']);
 Route::get('signup', [SignupController::class, 'view'])->name('front.signup');
 Route::post('signup', [SignupController::class, 'store']);
 //
-Route::middleware('auth')->group(function () {
+// Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('user.dashboard');
     Route::post('/signout', [SignoutController::class, 'signout'])->name('user.signout');
-});
+// });
 
 /*
 Route::get('/dashboard', function () {
