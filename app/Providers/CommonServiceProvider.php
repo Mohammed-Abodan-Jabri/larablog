@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use App\Utils\Common;
+use App\Services\CommonService;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 
@@ -22,7 +22,6 @@ class CommonServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //
-        $common = new Common();
-        View::share('appName', $common->getAppName());
+        View::share('common', new CommonService());
     }
 }
