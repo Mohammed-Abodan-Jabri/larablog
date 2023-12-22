@@ -58,7 +58,7 @@ class User extends Authenticatable
         }
         return false;
     }
-
+        // assign 
     public function assignRole($role)
     {
         if (is_string($role)) {

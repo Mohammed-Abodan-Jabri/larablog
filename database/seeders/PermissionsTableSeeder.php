@@ -17,10 +17,13 @@ class PermissionsTableSeeder extends Seeder
             'label' => 'Access Dashboard',
         ]);
         Permission::create([
+            // edit just own
             'name' => 'edit-own-content',
             'label' => 'Edit Own Content',
         ]);
         Permission::create([
+            // edit just any
+
             'name' => 'edit-any-content',
             'label' => 'Edit Any Content',
         ]);
